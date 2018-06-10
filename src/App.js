@@ -11,8 +11,8 @@ class App extends Component {
             console.log("Please ensure the files are named as follows:");
             console.log("Users file must contain the word user");
             console.log("Tweet file must contain the word tweet");
-            console.log("Files can not contain both words \"user\" and \"tweet\"")
-        console.groupEnd()
+            console.log("Files can not contain both words \"user\" and \"tweet\"");
+        console.groupEnd();
         return (
             <div className="App">
             <header className="App-header">
@@ -35,12 +35,12 @@ class App extends Component {
             err("Missing 1 required file");
         }
         else{
-            read(params)
+            read(params);
         }
-        
+
         function err(message){
             document.getElementById("warningMessage").innerHTML = message;
-        }    
+        }
     }
 }
 

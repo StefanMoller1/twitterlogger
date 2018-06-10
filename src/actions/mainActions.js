@@ -12,7 +12,7 @@ function read(files){
                 return final;
             }).then(e => {
                 if (final.users && final.tweets){
-                    logData(final)
+                    logData(final);
                 }
             });
         }
@@ -65,11 +65,11 @@ function prepFeed(item){
 }
 
 function logData(final){
-    final.users = JSON.parse(final.users)
-    final.tweets = JSON.parse(final.tweets)
+    final.users = JSON.parse(final.users);
+    final.tweets = JSON.parse(final.tweets);
 
     var users = Object.keys(final.users);
-    
+
     users.map(e => users = [...users, ...final.users[e]]);
     users = [...new Set(users)].sort();
     users.forEach(user =>{
